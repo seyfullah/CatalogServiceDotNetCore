@@ -1,0 +1,22 @@
+{
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5003",
+        "SkipSslValidation": true
+    },
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/gateway/Products",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "DownstreamPathTemplate": "/api/Products",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5284
+                }
+            ]
+        }
+    ]
+}
