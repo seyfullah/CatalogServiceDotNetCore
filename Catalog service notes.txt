@@ -1,0 +1,74 @@
+dotnet new webapi -o FlowardApi
+cd FlowardApi
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+code -r ../FlowardApi
+
+dotnet-aspnet-codegenerator controller -name ProductController -async -api -m Product -dc ProductDb -outDir Controllers
+
+https://base64.guru/converter/encode/image
+
+https://exceptionnotfound.net/the-repository-service-pattern-with-dependency-injection-and-asp-net-core/
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio-code
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?view=aspnetcore-6.0&tabs=visual-studio-code
+
+https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli
+dotnet add package Microsoft.EntityFrameworkCore.SQLite
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+Hem dependency injection hem de middlevar için aşağıdakini kullan:
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0
+
+https://medium.com/devopsturkiye/rabbitmq-nedir-docker-%C3%BCzerinde-%C3%A7al%C4%B1%C5%9Fan-rabbitmq-ile-net-core-nas%C4%B1l-haberle%C5%9Filir-d61f62513fc9
+dotnet add package Rabbitmq.Client
+Docker'da çalıştırmak için:
+docker run -d --hostname my-rabbit --name myrabbit -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=123456 -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+Hata verirse silip, yeniden çalıştırmak için:
+sudo docker container ls --all
+sudo docker rm 7956e0ffb28b
+
+http://localhost:15672/#/queues
+
+
+dotnet new console -n CatalogService.Consumer
+dotnet add package Rabbitmq.Client
+
+https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html
+
+
+https://code-maze.com/aspnetcore-api-gateway-with-ocelot/
+https://auth0.com/blog/implementing-api-gateway-in-aspnet-core-with-ocelot/
+
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+
+
+https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+dotnet new xunit -o CatalogService.Tests
+dotnet sln add ./CatalogService.Tests/CatalogService.Tests.csproj
+dotnet add ./CatalogService.Tests/CatalogService.Tests.csproj reference ./CatalogService.Service/FlowardApi.csproj  
+
+https://miro.com/app/board/uXjVPV-9Vlw=/
+
+https://codewithmukesh.com/blog/send-emails-with-aspnet-core/#A_Fake_SMTP_Provider
+https://code-maze.com/aspnetcore-send-email/
+
+https://pradeepl.com/blog/dotnet/configuration-in-a-net-core-console-application/
+dotnet add package Microsoft.Extensions.Configuration
+dotnet add package Microsoft.Extensions.Configuration.Json
+dotnet add package Microsoft.Extensions.Configuration.CommandLine
+dotnet add package Microsoft.Extensions.Configuration.Binder
+dotnet add package Microsoft.Extensions.Configuration.EnvironmentVariables 
+
+https://www.c-sharpcorner.com/article/implementing-cqrs-and-mediator-patterns-with-asp-net-core-web-api/
+
+
+https://www.c-sharpcorner.com/article/how-to-implement-jwt-authentication-in-web-api-using-net-6-0-asp-net-core/
+
+dotnet ef migrations add "Initial db operation"
+
+dotnet ef database update
+
+https://www.c-sharpcorner.com/article/jwt-token-creation-authentication-and-authorization-in-asp-net-core-6-0-with-po/
